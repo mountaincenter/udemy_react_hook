@@ -2,13 +2,13 @@ version: "3"
 
 services:
   db:
-    image: mysql:8.0.23
+    image: mysql:5.7
     env_file:
       - ./back/environments/db.env
     restart: always
-    volumes: 
+    volumes:
       - db-data:/var/lib/mysql:cached
-
+      
   back:
     build: back/
     # rm -f tmp/pids/server.pidしとくとrailsのサーバ消し損ねたときに便利
