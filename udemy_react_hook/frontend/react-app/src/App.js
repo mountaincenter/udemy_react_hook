@@ -4,6 +4,7 @@ const App = (props) =>  {
 
   return (
     <>
+      This is a template for React app.
     </>
   );
 }
