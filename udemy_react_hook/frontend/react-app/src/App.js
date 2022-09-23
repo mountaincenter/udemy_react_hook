@@ -1,10 +1,11 @@
-import React, { useState } from "react"
+import React, { useState, useEffect } from "react"
 
 const App = (props) =>  {
   const [state, setState] = useState(props)
   const { name, price } = state
-  console.log(state)
-  console.log(name)
+  useEffect(() => {
+    console.log("This callback is from name only")
+  },[name])
 
   return (
     <>
