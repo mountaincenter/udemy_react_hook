@@ -10,7 +10,7 @@ import AppContext from "../contexts/AppContext"
 import { timeCurrentIso8601 } from "../utils"
 
 const Event = ({ event }) => {
-  const { dispatch} = useContext(AppContext)
+  const { dispatch } = useContext(AppContext)
   const id = event.id
   const handleClickDeleteButton = () => {
     const result = window.confirm(`イベント(id=${id})を本当に削除してもよいですか？`)
@@ -20,7 +20,7 @@ const Event = ({ event }) => {
       dispatch({
         type: ADD_OPERATION_LOG,
         description: `イベント(id=${id})を削除しました。`,
-        operatedAt: timeCurrentIso8601
+        operatedAt: timeCurrentIso8601()
       })
     }
   }
