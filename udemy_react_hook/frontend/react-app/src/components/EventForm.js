@@ -13,7 +13,6 @@ const EventForm = () => {
   const { state, dispatch } = useContext(AppContext)
   const [title, setTitle] = useState('')
   const [body, setBody] = useState('')
-  console.log(timeCurrentIso8601())
   const addEvent = e => {
     e.preventDefault()
     dispatch({
